@@ -3,6 +3,9 @@
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
   <meta charset="utf-8">
@@ -47,6 +50,7 @@ desired effect
 |---------------------------------------------------------|
 -->
 <body class="hold-transition skin-blue sidebar-mini">
+
 <div class="wrapper">
 
   <!-- Main Header -->
@@ -56,24 +60,64 @@ desired effect
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Page Header
-        <small>Optional description</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
-      </ol>
-    </section>
+
 
     <!-- Main content -->
     <section class="content container-fluid">
+                 <div class="col-md-3 col-sm-6 col-xs-12">
+                                 <div class="info-box">
+                                   <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
+                                   <div class="info-box-content">
+                                     <span class="info-box-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在案企业</font></font></span>
+                                     <span class="info-box-number"><font style="vertical-align: inherit;"><font id="zaianqiye" style="vertical-align: inherit;">39067</font></font></span>
+                                 </div>
+                         </div>
+                 </div>
+                 <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="info-box">
+                            <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
+                             <div class="info-box-content">
+                             <span class="info-box-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">报检企业</font></font></span>
+                             <span class="info-box-number"><font style="vertical-align: inherit;"><font id="baojianqiye" style="vertical-align: inherit;">3443</font></font></span>
+                          </div>
+                      </div>
+                 </div>
+                 <div class="col-md-3 col-sm-6 col-xs-12">
+                           <div class="info-box">
+                               <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
+                               <div class="info-box-content">
+                                <span class="info-box-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">进口收获企业</font></font></span>
+                                <span class="info-box-number"><font style="vertical-align: inherit;"><font id="jinkoushouhuo" style="vertical-align: inherit;">22057</font></font></span>
+                          </div>
+                        </div>
+                 </div>
+                 <div class="info-box">
+                               <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
+                                <div class="info-box-content">
+                               <span class="info-box-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">出口发货企业</font></font></span>
+                               <span class="info-box-number"><font style="vertical-align: inherit;"><font id="chukoufahuo" style="vertical-align: inherit;">10652</font></font></span>
+                        </div>
+                 </div>
+                  <div class="col-md-3 col-sm-6 col-xs-12">
+                                 <div class="info-box">
+                                   <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
+                                   <div class="info-box-content">
+                                     <span class="info-box-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">出口生产企业</font></font></span>
+                                     <span class="info-box-number"><font style="vertical-align: inherit;"><font id="chukoushengchan" style="vertical-align: inherit;">6506</font></font></span>
+                                   </div>
+                           </div>
+                  </div>
+                  <div class="row">
+                       <div class="col-md-12" >
+                         <div class="panel panel-default" >
+                           <div class="panel-body" >
+                             <div id="creditBatchMap" style="height:650px;"></div>
+                           </div>
+                         </div>
+                       </div>
+                 </div>
 
-      <!--------------------------
-        | Your Page Content Here |
-        -------------------------->
+
 
     </section>
     <!-- /.content -->
@@ -86,8 +130,6 @@ desired effect
     <div class="pull-right hidden-xs">
       Anything you want
     </div>
-    <!-- Default to the left -->
-    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->
@@ -169,7 +211,6 @@ desired effect
 </div>
 <!-- ./wrapper -->
 
-
 <!-- jQuery 3 -->
 <script src="${pageContext.request.contextPath}/adminlte/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
@@ -180,10 +221,358 @@ desired effect
 <script src="${pageContext.request.contextPath}/adminlte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
 <script src="${pageContext.request.contextPath}/adminlte/bower_components/fastclick/lib/fastclick.js"></script>
-
+<script src="${pageContext.request.contextPath}/echarts/echarts.min.js"></script>
 </body>
 <script type="application/javascript">
-    $.post('${pageContext.request.contextPath}/dashboard/getTestData1.do',null,function (data) {});
-    $.post('${pageContext.request.contextPath}/dashboard/getTestData2.do',null,function (data) {});
+     $.post('${pageContext.request.contextPath}/dashboard/getTestData1.do',null,function (data) {});
+     $.post('${pageContext.request.contextPath}/dashboard/getTestData2.do',null,function (data) {});
+
+
+     $.post('${pageContext.request.contextPath}/dangqianxinyong/getBaojianqiye.do',null,function (data) {
+           document.getElementById("baojianqiye").innerText=data;
+     });
+     $.post('${pageContext.request.contextPath}/dangqianxinyong/getZaianqiye.do',null,function (data) {
+            document.getElementById("zaianqiye").innerText=data;
+     });
+     $.post('${pageContext.request.contextPath}/dangqianxinyong/getJinkoushouhuoqiye.do',null,function (data) {
+             document.getElementById("jinkoushouhuo").innerText=data;
+     });
+     $.post('${pageContext.request.contextPath}/dangqianxinyong/getChukoufahuoqiye.do',null,function (data) {
+             document.getElementById("chukoufahuo").innerText=data;
+     });
+     $.post('${pageContext.request.contextPath}/dangqianxinyong/getChukoushengchanqiye.do',null,function (data) {
+             document.getElementById("chukoushengchan").innerText=data;
+     });
+      $.post('${pageContext.request.contextPath}/dangqianxinyong/getDangqianxinyong.do',null,
+          function (data) {
+                         if (data){
+                             var creditBatchMapOption = {
+                               	    title : {
+                               	        text: '企业当前信用分值和报检不合格批次分布',
+                               	    },
+                               	    grid: {
+                               	        left: '3%',
+                               	        right: '7%',
+                               	        bottom: '3%',
+                               	        containLabel: true
+                               	    },
+                               	    tooltip : {
+                               	        // trigger: 'axis',
+                               	        showDelay : 0,
+                               	        formatter : function (params) {
+                               	            if (params.value.length > 1) {
+                               	                return params.seriesName + '<br/>'
+                               	              + '信用分值:'+ params.value[0] + '<br>'
+                               	              + '报检不合格批次:'+ params.value[1]+ '<br>'
+                               	              + '报检单位:' + params.name;
+                               	            }
+                               	            else {
+                               	                return params.seriesName + ' :<br/>'
+                               	                + params.name + ' : '
+                               	                + params.value;
+                               	            }
+                               	        },
+                               	        axisPointer:{
+                               	            show: true,
+                               	            type : 'cross',
+                               	            lineStyle: {
+                               	                type : 'dashed',
+                               	                width : 1
+                               	            }
+                               	        }
+                               	    },
+                               	    toolbox: {
+                               	        feature: {
+                               	            dataZoom: {},
+                               	            brush: {
+                               	                type: ['rect', 'polygon', 'clear']
+                               	            }
+                               	        }
+                               	    },
+                               	    brush: {
+                               	    },
+                               	    legend: {
+                               	        data: ['信用等级A','信用等级B','信用等级C','信用等级D','信用等级AA','汇总'],
+                               	        left: 'center',
+                               	        top: '3%'
+                               	    },
+                               	    xAxis : [
+                               	        {
+                               	            name : '信用分值',
+                               	            type : 'value',
+                               	            scale:true,
+                               	            axisLabel : {
+                               	                formatter: '{value}'
+                               	            },
+                               	            splitLine: {
+                               	                show: false
+                               	            }
+                               	        }
+                               	    ],
+                               	    yAxis : [
+                               	        {
+                               	            name : '报检不合格批次',
+                               	            type : 'value',
+                               	            scale:true,
+                               	            axisLabel : {
+                               	                formatter: '{value}'
+                               	            },
+                               	            splitLine: {
+                               	                show: false
+                               	            }
+                               	        }
+                               	    ],
+                               	    series : [
+                               	                     {
+                                                   	            name:'信用等级AA',
+                                                   	            type:'scatter',
+                                                   	            data: data.AA,
+                                                   	            markArea: {
+                                                   	                silent: true,
+                                                   	                itemStyle: {
+                                                   	                    normal: {
+                                                   	                        color: 'transparent',
+                                                   	                        borderWidth: 1,
+                                                   	                        borderType: 'dashed'
+                                                   	                    }
+                                                   	                },
+                                                   	                data: [[{
+                                                   	                    name: '信用等级AA分布区间',
+                                                   	                    xAxis: 'min',
+                                                   	                    yAxis: 'min'
+                                                   	                }, {
+                                                   	                    xAxis: 'max',
+                                                   	                    yAxis: 'max'
+                                                   	                }]]
+                                                   	            },
+                                                   	            markPoint : {
+                                                   	                data : [
+                                                   	                    {type : 'max', name: '最大值'},
+                                                   	                    {type : 'min', name: '最小值'}
+                                                   	                ]
+                                                   	            },
+                                                   	            markLine : {
+                                                   	                lineStyle: {
+                                                   	                    normal: {
+                                                   	                        type: 'solid'
+                                                   	                    }
+                                                   	                },
+                                                   	                data : [
+                                                   	                     {type : 'average', name: '平均值',valueIndex:0},
+                                                                         {type : 'average', name: '平均值',valueIndex:1}
+                                                   	                ]
+                                                   	            }
+                                                   	        },
+
+                               	        {
+                               	            name:'信用等级A',
+                               	            type:'scatter',
+                               	            data: data.A,
+                               	            markArea: {
+                               	                silent: true,
+                               	                itemStyle: {
+                               	                    normal: {
+                               	                        color: 'transparent',
+                               	                        borderWidth: 1,
+                               	                        borderType: 'dashed'
+                               	                    }
+                               	                },
+                               	                data: [[{
+                               	                    name: '信用等级A分布区间',
+                               	                    xAxis: 'min',
+                               	                    yAxis: 'min'
+                               	                }, {
+                               	                    xAxis: 'max',
+                               	                    yAxis: 'max'
+                               	                }]]
+                               	            },
+                               	            markPoint : {
+                               	                data : [
+                               	                    {type : 'max', name: '最大值'},
+                               	                    {type : 'min', name: '最小值'}
+                               	                ]
+                               	            },
+                               	            markLine : {
+                               	                lineStyle: {
+                               	                    normal: {
+                               	                        type: 'solid'
+                               	                    }
+                               	                },
+                               	                data : [
+                             	                     {type : 'average', name: '平均值',valueIndex:0},
+                                                     {type : 'average', name: '平均值',valueIndex:1}
+                               	                ]
+                               	            }
+                               	        },
+                               	        {
+                               	            name:'信用等级B',
+                               	            type:'scatter',
+                               	            data: data.B,
+                               	            markArea: {
+                               	                silent: true,
+                               	                itemStyle: {
+                               	                    normal: {
+                               	                        color: 'transparent',
+                               	                        borderWidth: 1,
+                               	                        borderType: 'dashed'
+                               	                    }
+                               	                },
+                               	                data: [[{
+                               	                    name: '信用等级B分布区间',
+                               	                    xAxis: 'min',
+                               	                    yAxis: 'min'
+                               	                }, {
+                               	                    xAxis: 'max',
+                               	                    yAxis: 'max'
+                               	                }]]
+                               	            },
+                               	            markPoint : {
+                               	                data : [
+                               	                    {type : 'max', name: '最大值'},
+                               	                    {type : 'min', name: '最小值'}
+                               	                ]
+                               	            },
+                               	            markLine : {
+                               	                lineStyle: {
+                               	                    normal: {
+                               	                        type: 'solid'
+                               	                    }
+                               	                },
+                               	                data : [
+                               	                    {type : 'average', name: '平均值',valueIndex:0},
+                                                    {type : 'average', name: '平均值',valueIndex:1}
+                               	                ]
+                               	            }
+                               	        },
+                               	         {
+                                           	            name:'汇总',
+                                           	            type:'scatter',
+                                           	            data: data.HZ,
+                                           	            markArea: {
+                                           	                silent: true,
+                                           	                itemStyle: {
+                                           	                    normal: {
+                                           	                        color: 'transparent',
+                                           	                        borderWidth: 1,
+                                           	                        borderType: 'dashed'
+                                           	                    }
+                                           	                },
+                                           	                data: [[{
+                                           	                    name: '汇总分布区间',
+                                           	                    xAxis: 'min',
+                                           	                    yAxis: 'min'
+                                           	                }, {
+                                           	                    xAxis: 'max',
+                                           	                    yAxis: 'max'
+                                           	                }]]
+                                           	            },
+                                           	            markPoint : {
+                                           	                data : [
+                                           	                    {type : 'max', name: '最大值'},
+                                           	                    {type : 'min', name: '最小值'}
+                                           	                ]
+                                           	            },
+                                           	            markLine : {
+                                           	                lineStyle: {
+                                           	                    normal: {
+                                           	                        type: 'solid'
+                                           	                    }
+                                           	                },
+                                           	                data : [
+                                           	                     {type : 'average', name: '平均值',valueIndex:0},
+                                                                 {type : 'average', name: '平均值',valueIndex:1}
+                                           	                ]
+                                           	            }
+                                           	        },
+                               	         {
+                               	            name:'信用等级C',
+                               	            type:'scatter',
+                               	            data: data.C,
+                               	            markArea: {
+                               	                silent: true,
+                               	                itemStyle: {
+                               	                    normal: {
+                               	                        color: 'transparent',
+                               	                        borderWidth: 1,
+                               	                        borderType: 'dashed'
+                               	                    }
+                               	                },
+                               	                data: [[{
+                               	                    name: '信用等级C分布区间',
+                               	                    xAxis: 'min',
+                               	                    yAxis: 'min'
+                               	                }, {
+                               	                    xAxis: 'max',
+                               	                    yAxis: 'max'
+                               	                }]]
+                               	            },
+                               	            markPoint : {
+                               	                data : [
+                               	                    {type : 'max', name: '最大值'},
+                               	                    {type : 'min', name: '最小值'}
+                               	                ]
+                               	            },
+                               	            markLine : {
+                               	                lineStyle: {
+                               	                    normal: {
+                               	                        type: 'solid'
+                               	                    }
+                               	                },
+                               	                data : [
+                            	                     {type : 'average', name: '平均值',valueIndex:0},
+                                                     {type : 'average', name: '平均值',valueIndex:1}                               	                ]
+                               	            }
+                               	        },
+                               	         {
+                               	            name:'信用等级D',
+                               	            type:'scatter',
+                               	            data: data.D,
+                               	            markArea: {
+                               	                silent: true,
+                               	                itemStyle: {
+                               	                    normal: {
+                               	                        color: 'transparent',
+                               	                        borderWidth: 1,
+                               	                        borderType: 'dashed'
+                               	                    }
+                               	                },
+                               	                data: [[{
+                               	                    name: '信用等级D分布区间',
+                               	                    xAxis: 'min',
+                               	                    yAxis: 'min'
+                               	                }, {
+                               	                    xAxis: 'max',
+                               	                    yAxis: 'max'
+                               	                }]]
+                               	            },
+                               	            markPoint : {
+                               	                data : [
+                               	                    {type : 'max', name: '最大值'},
+                               	                    {type : 'min', name: '最小值'}
+                               	                ]
+                               	            },
+                               	            markLine : {
+                               	                lineStyle: {
+                               	                    normal: {
+                               	                        type: 'solid'
+                               	                    }
+                               	                },
+                               	                data : [
+                             	                     {type : 'average', name: '平均值',valueIndex:0},
+                                                     {type : 'average', name: '平均值',valueIndex:1}
+                               	                ]
+                               	            }
+                               	        }
+                               	    ]
+                               	};
+
+                             }
+                     var creditBatchMapChart = echarts.init(document.getElementById('creditBatchMap'));
+                                     creditBatchMapChart.setOption(creditBatchMapOption);
+                                     creditBatchMapChart.on('click', function (params) {
+                                         openDetailMod(params.value[0],params.value[0]);
+                                     });
+
+         },'json');
 </script>
 </html>
