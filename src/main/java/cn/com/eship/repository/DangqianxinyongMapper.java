@@ -11,4 +11,11 @@ public interface DangqianxinyongMapper {
   Integer  selectJinkoushouhuoqiye();
   Integer  selectChukoufahuoqiye();
   Integer  selectChukoushengchanqiye();
+  Integer  selectBYBaojiandan();
+  Long  selectBYBaojianjine();
+  Integer  selectBYBaojianqiye();
+  Long     selectBjjeBy();
+  Long     selectBjjeSy();
+  Integer  selectBYbuhegepici();
+  Long  selectBYbuhegejine();
 }

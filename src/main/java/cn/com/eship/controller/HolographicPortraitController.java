@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/holographicPortrait")
@@ -25,15 +26,24 @@ public class HolographicPortraitController {
         this.itfEntBaseInfoService = itfEntBaseInfoService;
     }
 
-    @RequestMapping("/holographicportraitPage")
-    public String openHolographicportraitPage(){
-        return "holographicportrait";
-    }
-
     @RequestMapping(value = "getItfEntBaseInfo", method = RequestMethod.POST)
      public
      @ResponseBody
-    List<ItfEntBaseInfo> getItfEntBaseInfo(String str){
+    Map getItfEntBaseInfo(String str){
         return itfEntBaseInfoService.getItfEntBaseInfo(str);
      }
+
+    @RequestMapping(value = "getJYan", method = RequestMethod.POST)
+    public
+    @ResponseBody
+     Map getJYan(){
+        return  holographicPortraitService.getJYan();
+    }
+
+    @RequestMapping(value = "getJYi", method = RequestMethod.POST)
+    public
+    @ResponseBody
+    Map getJYi(){
+        return  holographicPortraitService.getJYi();
+    }
 }

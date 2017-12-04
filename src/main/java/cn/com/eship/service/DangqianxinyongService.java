@@ -10,4 +10,10 @@ public interface DangqianxinyongService {
     Integer  getJinkoushouhuoqiye();
     Integer  getChukoufahuoqiye();
     Integer  getChukoushengchanqiye();
+    Integer  selectBYBaojiandan();
+    Double     selectBYBaojianjine();
+    Integer  selectBYBaojianqiye();
+    Double     selectBjjeBfb();
+    Integer  selectBYbuhegepici();
+    Double     selectBYbuhegejine();
 }

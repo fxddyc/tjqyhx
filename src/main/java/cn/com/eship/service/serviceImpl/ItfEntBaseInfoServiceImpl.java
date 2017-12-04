@@ -7,7 +7,9 @@ import cn.com.eship.springUtil.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class ItfEntBaseInfoServiceImpl implements ItfEntBaseInfoService {
@@ -21,7 +23,14 @@ public class ItfEntBaseInfoServiceImpl implements ItfEntBaseInfoService {
 
     @Override
     @DataSource("eciq_database")
-    public List<ItfEntBaseInfo> getItfEntBaseInfo(String str) {
-        return itfEntBaseInfoMapper.selectItfEntBaseInfo(str);
+    public Map getItfEntBaseInfo(String str) {
+        Map<String,List<ItfEntBaseInfo>> map = new HashMap<String,List<ItfEntBaseInfo>>();
+        map.put("itfEntBaseInfo",itfEntBaseInfoMapper.selectItfEntBaseInfo(str));
+        return map;
+    }
+
+    @Override
+    public ItfEntBaseInfo selectItfEntBaseInfoByZzjgdm(String zzjgdm) {
+        return itfEntBaseInfoMapper.selectItfEntBaseInfoByZzjgdm(zzjgdm);
     }
 }

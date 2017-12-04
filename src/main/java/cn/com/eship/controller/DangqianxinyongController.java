@@ -3,7 +3,6 @@ package cn.com.eship.controller;
 import cn.com.eship.service.DangqianxinyongService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -66,5 +65,47 @@ public class DangqianxinyongController {
     @ResponseBody
     Integer getChukoushengchanqiye(){
         return dangqianxinyongService.getChukoushengchanqiye();
+    }
+
+    @RequestMapping(value = "selectBYBaojiandan", method = RequestMethod.POST)
+    public
+    @ResponseBody
+    Integer selectBYBaojiandan(){
+        return dangqianxinyongService.selectBYBaojiandan();
+    }
+
+    @RequestMapping(value = "selectBYBaojianjine", method = RequestMethod.POST)
+    public
+    @ResponseBody
+    Double selectBYBaojianjine(){
+        return dangqianxinyongService.selectBYBaojianjine();
+    }
+
+    @RequestMapping(value = "selectBYBaojianqiye", method = RequestMethod.POST)
+    public
+    @ResponseBody
+    Integer selectBYBaojianqiye(){
+        return dangqianxinyongService.selectBYBaojianqiye();
+    }
+
+    @RequestMapping(value = "selectBjjeBfb", method = RequestMethod.POST)
+    public
+    @ResponseBody
+    Double selectBjjeBfb(){
+        return dangqianxinyongService.selectBjjeBfb();
+    }
+
+    @RequestMapping(value = "selectBYbuhegepici", method = RequestMethod.POST)
+    public
+    @ResponseBody
+    Integer selectBYbuhegepici(){
+        return dangqianxinyongService.selectBYbuhegepici();
+    }
+
+    @RequestMapping(value = "selectBYbuhegejine", method = RequestMethod.POST)
+    public
+    @ResponseBody
+    Double selectBYbuhegejine(){
+        return dangqianxinyongService.selectBYbuhegejine();
     }
 }

@@ -154,6 +154,12 @@
     or DECL_REG_NO like CONCAT(CONCAT('%', #{str}), '%')
     or CONT_TEL like CONCAT(CONCAT('%', #{str}), '%')
   </select>
+  <select id="selectItfEntBaseInfoByZzjgdm" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from ECIQ_GDATA.ITF_ENT_BASE_INFO
+    where zzjgdm = #{zzjgdm,jdbcType=VARCHAR}
+  </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     <!--
       WARNING - @mbggenerated

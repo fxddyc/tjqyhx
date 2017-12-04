@@ -4,10 +4,10 @@ import cn.com.eship.models.Dangqianxinyongxinxi;
 import cn.com.eship.repository.DangqianxinyongMapper;
 import cn.com.eship.service.DangqianxinyongService;
 import cn.com.eship.springUtil.DataSource;
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -128,5 +128,53 @@ public class DangqianxinyongServiceImpl implements DangqianxinyongService {
     @DataSource("eciq_database")
     public Integer getChukoushengchanqiye() {
         return dangqianxinyongMapper.selectChukoushengchanqiye();
+    }
+
+    @Override
+    @DataSource("eciq_database")
+    public Integer selectBYBaojiandan() {
+        return dangqianxinyongMapper.selectBYBaojiandan();
+    }
+
+    @Override
+    @DataSource("eciq_database")
+    public Double selectBYBaojianjine() {
+        DecimalFormat    df   = new DecimalFormat("######0.00");
+        Double  je = (double)(dangqianxinyongMapper.selectBYBaojianjine())/100000000;
+        return Double.parseDouble(df.format(je));
+    }
+
+    @Override
+    @DataSource("eciq_database")
+    public Integer selectBYBaojianqiye() {
+        return dangqianxinyongMapper.selectBYBaojianqiye();
+    }
+
+
+    @Override
+    @DataSource("eciq_database")
+    public Double selectBjjeBfb() {
+        DecimalFormat    df   = new DecimalFormat("######0.00");
+        Long by = dangqianxinyongMapper.selectBjjeBy();
+        Long sy = dangqianxinyongMapper.selectBjjeSy();
+        Double by1= (double)(by/1000000);
+        Double sy1= (double)(sy/1000000);
+        Double bfb = by1*100/sy1;
+        Double bfb1= Double.parseDouble(df.format(bfb));
+        return bfb1;
+    }
+
+    @Override
+    @DataSource("eciq_database")
+    public Integer selectBYbuhegepici() {
+        return dangqianxinyongMapper.selectBYbuhegepici();
+    }
+
+    @Override
+    @DataSource("eciq_database")
+    public Double selectBYbuhegejine() {
+        DecimalFormat    df   = new DecimalFormat("######0.00");
+        Double  je = (double)(dangqianxinyongMapper.selectBYbuhegejine())/100000000;
+        return Double.parseDouble(df.format(je));
     }
 }

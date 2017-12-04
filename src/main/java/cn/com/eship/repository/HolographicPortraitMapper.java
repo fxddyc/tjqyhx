@@ -14,4 +14,5 @@ public interface HolographicPortraitMapper {
     List<ItfInsResultGoods> selectJYanQysm();
     List<ItfInsResultGoods> selectJYiQysm1();
     List<ItfInsResultGoods> selectJYiQysm2();
+    List<ItfInsResultGoods> selectDyfb();
 }

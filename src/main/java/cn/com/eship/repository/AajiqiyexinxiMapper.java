@@ -1,8 +1,6 @@
 package cn.com.eship.repository;
 
 import cn.com.eship.models.Aajiqiyexinxi;
-import cn.com.eship.models.AajiqiyexinxiExample;
-import java.util.List;
 
 public interface AajiqiyexinxiMapper {
 
@@ -30,5 +28,4 @@ public interface AajiqiyexinxiMapper {
      *
      * @mbggenerated
      */
-    List<Aajiqiyexinxi> selectByExample(AajiqiyexinxiExample example);
 }

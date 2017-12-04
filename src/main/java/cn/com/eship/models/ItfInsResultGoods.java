@@ -5,6 +5,15 @@ public class ItfInsResultGoods {
     private  long bjpc;
     private  long qysm;
     private  String dm;
+    private  String cname;
+
+    public String getCname() {
+        return cname;
+    }
+
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
 
     public String getDm() {
         return dm;

@@ -64,49 +64,66 @@ desired effect
 
     <!-- Main content -->
     <section class="content container-fluid">
-                 <div class="col-md-3 col-sm-6 col-xs-12">
-                                 <div class="info-box">
-                                   <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
-                                   <div class="info-box-content">
-                                     <span class="info-box-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在案企业</font></font></span>
-                                     <span class="info-box-number"><font style="vertical-align: inherit;"><font id="zaianqiye" style="vertical-align: inherit;">39067</font></font></span>
-                                 </div>
-                         </div>
-                 </div>
-                 <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="info-box">
-                            <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
-                             <div class="info-box-content">
-                             <span class="info-box-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">报检企业</font></font></span>
-                             <span class="info-box-number"><font style="vertical-align: inherit;"><font id="baojianqiye" style="vertical-align: inherit;">3443</font></font></span>
-                          </div>
-                      </div>
-                 </div>
-                 <div class="col-md-3 col-sm-6 col-xs-12">
-                           <div class="info-box">
-                               <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
-                               <div class="info-box-content">
-                                <span class="info-box-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">进口收获企业</font></font></span>
-                                <span class="info-box-number"><font style="vertical-align: inherit;"><font id="jinkoushouhuo" style="vertical-align: inherit;">22057</font></font></span>
-                          </div>
-                        </div>
-                 </div>
-                 <div class="info-box">
-                               <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
-                                <div class="info-box-content">
-                               <span class="info-box-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">出口发货企业</font></font></span>
-                               <span class="info-box-number"><font style="vertical-align: inherit;"><font id="chukoufahuo" style="vertical-align: inherit;">10652</font></font></span>
-                        </div>
-                 </div>
-                  <div class="col-md-3 col-sm-6 col-xs-12">
-                                 <div class="info-box">
-                                   <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
-                                   <div class="info-box-content">
-                                     <span class="info-box-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">出口生产企业</font></font></span>
-                                     <span class="info-box-number"><font style="vertical-align: inherit;"><font id="chukoushengchan" style="vertical-align: inherit;">6506</font></font></span>
-                                   </div>
-                           </div>
-                  </div>
+
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在案企业</font></font></span>
+                        <span class="info-box-number"><font style="vertical-align: inherit;"><font id="zaianqiye" style="vertical-align: inherit;"></font></font></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">报检企业</font></font></span>
+                        <span class="info-box-number"><font style="vertical-align: inherit;"><font id="baojianqiye" style="vertical-align: inherit;"></font></font></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">收货企业</font></font></span>
+                        <span class="info-box-number"><font style="vertical-align: inherit;"><font id="jinkoushouhuo" style="vertical-align: inherit;"></font></font></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发货企业</font></font></span>
+                        <span class="info-box-number"><font style="vertical-align: inherit;"><font id="chukoufahuo" style="vertical-align: inherit;"></font></font></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">出口生产企业</font></font></span>
+                        <span class="info-box-number"><font style="vertical-align: inherit;"><font id="chukoushengchan" style="vertical-align: inherit;"></font></font></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <div id="enterpriseType" style="height:400px"></div>
+            </div>
+            <div class="col-md-6">
+                <div id="enterpriseType2" style="height:400px"></div>
+            </div>
+        </div>
+
+
                   <div class="row">
                        <div class="col-md-12" >
                          <div class="panel panel-default" >
@@ -116,11 +133,94 @@ desired effect
                          </div>
                        </div>
                  </div>
+     <div class="row">
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-aqua">
+            <div class="inner">
+              <h3><font style="vertical-align: inherit;"><font id="byljbjd" style="vertical-align: inherit;"></font></font></h3>
+
+              <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">本月累计报检单</font></font></p>
+            </div>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-green">
+            <div class="inner">
+              <h3><font style="vertical-align: inherit;"><font id="byljbjje" style="vertical-align: inherit;"></font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">亿元</font></font></h3>
+
+              <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">本月累计报检金额</font></font></p>
+            </div>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-yellow">
+            <div class="inner">
+              <h3><font style="vertical-align: inherit;"><font id="byljbjqy" style="vertical-align: inherit;"></font></font></h3>
+
+              <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">本月累计报检企业</font></font></p>
+            </div>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-red">
+            <div class="inner">
+              <h3><font style="vertical-align: inherit;"><font id="jebfb" style="vertical-align: inherit;"></font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">％</font></font></h3>
+
+              <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">截止今日已完成上月报检金额</font></font></p>
+            </div>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+                 <!-- small box -->
+                 <div class="small-box bg-green">
+                   <div class="inner">
+                     <h3><font style="vertical-align: inherit;"><font id="byljbhgpc" style="vertical-align: inherit;"></font></font></h3>
+
+                     <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">本月检验不合格累计批次</font></font></p>
+                   </div>
+                   </div>
+               </div>
+         <div class="col-lg-3 col-xs-6">
+                          <!-- small box -->
+                          <div class="small-box bg-red">
+                            <div class="inner">
+                              <h3><font style="vertical-align: inherit;"><font id="byljbhgje" style="vertical-align: inherit;"></font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">亿元</font></font></h3>
+                              <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">本月检验不合格累计金额</font></font></p>
+                            </div>
+                          </div>
+                        </div>
+      </div>
 
 
+        <div class="row">
 
-    </section>
-    <!-- /.content -->
+            <div class="col-md-6">
+                <div id="enterpriseType3" style="height:400px"></div>
+            </div>
+
+            <div class="col-md-6">
+                <div id="enterpriseType4" style="height:400px"></div>
+            </div>
+        </div>
+
+
+        <div  style="height:10px"></div>
+         <div class="row">
+             <button type="button" class="btn btn-info btn-flat">检验项目</button>&nbsp
+             <button type="button" class="btn btn-info btn-flat">检疫项目</button>
+          </div>
+        <div id="container" style="min-width:400px;height:400px"></div>
+
+     </section>
+     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
 
@@ -222,10 +322,11 @@ desired effect
 <!-- FastClick -->
 <script src="${pageContext.request.contextPath}/adminlte/bower_components/fastclick/lib/fastclick.js"></script>
 <script src="${pageContext.request.contextPath}/echarts/echarts.min.js"></script>
+<script src="${pageContext.request.contextPath}/hcharts/highcharts.js"></script>
+<script src="${pageContext.request.contextPath}/hcharts/highcharts-3d.js"></script>
+<script src="${pageContext.request.contextPath}/hcharts/highcharts-more.js"></script>
 </body>
 <script type="application/javascript">
-     $.post('${pageContext.request.contextPath}/dashboard/getTestData1.do',null,function (data) {});
-     $.post('${pageContext.request.contextPath}/dashboard/getTestData2.do',null,function (data) {});
 
 
      $.post('${pageContext.request.contextPath}/dangqianxinyong/getBaojianqiye.do',null,function (data) {
@@ -243,6 +344,25 @@ desired effect
      $.post('${pageContext.request.contextPath}/dangqianxinyong/getChukoushengchanqiye.do',null,function (data) {
              document.getElementById("chukoushengchan").innerText=data;
      });
+     $.post('${pageContext.request.contextPath}/dangqianxinyong/selectBYBaojiandan.do',null,function (data) {
+                document.getElementById("byljbjd").innerText=data;
+          });
+     $.post('${pageContext.request.contextPath}/dangqianxinyong/selectBYBaojianjine.do',null,function (data) {
+                document.getElementById("byljbjje").innerText=data;
+          });
+     $.post('${pageContext.request.contextPath}/dangqianxinyong/selectBYBaojianqiye.do',null,function (data) {
+                    document.getElementById("byljbjqy").innerText=data;
+              });
+     $.post('${pageContext.request.contextPath}/dangqianxinyong/selectBjjeBfb.do',null,function (data) {
+                        document.getElementById("jebfb").innerText=data;
+                  });
+    $.post('${pageContext.request.contextPath}/dangqianxinyong/selectBYbuhegepici.do',null,function (data) {
+                            document.getElementById("byljbhgpc").innerText=data;
+                      });
+    $.post('${pageContext.request.contextPath}/dangqianxinyong/selectBYbuhegejine.do',null,function (data) {
+                                document.getElementById("byljbhgje").innerText=data;
+                          });
+
       $.post('${pageContext.request.contextPath}/dangqianxinyong/getDangqianxinyong.do',null,
           function (data) {
                          if (data){
@@ -574,5 +694,276 @@ desired effect
                                      });
 
          },'json');
+
+
+     $.post('${pageContext.request.contextPath}/enterpriseType/getZb.do',null,function (data) {
+     $(function () {
+         $('#enterpriseType2').highcharts({
+             chart: {
+                 plotBackgroundColor: null,
+                 plotBorderWidth: null,
+                 plotShadow: false
+             },
+             title: {
+                 text: '企业性质分布占比'
+             },
+             tooltip: {
+                 headerFormat: '{series.name}<br>',
+                 pointFormat: '{point.name}: <b>{point.percentage:.1f}%</b>'
+             },
+             plotOptions: {
+                 pie: {
+                     allowPointSelect: true,
+                     cursor: 'pointer',
+                     dataLabels: {
+                         enabled: true,
+                         format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                         style: {
+                             color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                         }
+                     }
+                 }
+             },
+             series: [{
+                 type: 'pie',
+                 name: '企业性质分布占比',
+                 data:data.zb
+             }]
+         });
+     });
+     });
+ $.post('${pageContext.request.contextPath}/enterpriseType/getEnterpriseType.do',null,function (data) {
+     $(function () {
+         $('#enterpriseType').highcharts({
+             chart: {
+                 type: 'bar'
+             },
+             title: {
+                 text: '企业性质分布'
+             },
+             xAxis: {
+                 categories: data.lx,
+                 title: {
+                     text: null
+                 }
+             },
+             yAxis: {
+                 min: 0,
+                 title: {
+                     text: '企业性质分布',
+                     align: 'high'
+                 },
+                 labels: {
+                     overflow: 'justify'
+                 }
+             },
+             plotOptions: {
+                 bar: {
+                     dataLabels: {
+                         enabled: true,
+                         allowOverlap: true
+                     }
+                 }
+             },
+             legend: {
+                 layout: 'vertical',
+                 align: 'right',
+                 verticalAlign: 'top',
+                 x: -40,
+                 y: 100,
+                 floating: true,
+                 borderWidth: 1,
+                 backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+                 shadow: true
+             },
+             credits: {
+                 enabled: false
+             },
+             series: [{
+                 name:'企业性质分布',
+                 data: data.qysl
+             }]
+         });
+     });
+ });
+
+     $.post('${pageContext.request.contextPath}/holographicPortrait/getJYan.do',null,function (data) {
+                      $('#container').highcharts({
+                          chart: {
+                              type: 'column'
+                          },
+                          title: {
+                              text: '检验项目不合格原因概括'
+                          },
+                          xAxis: {
+                              name: 'X Axis',
+                              categories: ['品质', '数量', '规格', '重量', '安全','卫生','包装','标识','环保']
+                          },
+                          credits: {
+                              enabled: false
+                          },
+                          series: [{
+                              name: '企业数目',
+                              data: data.qysm
+                          }, {
+                              name: '报检批次',
+                              data: data.bjpc
+                          }, {
+                              name: '金额',
+                              data: data.rmb
+                          }]
+                      });
+                 });
+
+     function inspection() {
+           $.post('${pageContext.request.contextPath}/holographicPortrait/getJYan.do',null,function (data) {
+                                $('#container').highcharts({
+                                    chart: {
+                                        type: 'column'
+                                    },
+                                    title: {
+                                        text: '检验项目不合格原因概括'
+                                    },
+                                    xAxis: {
+                                        name: 'X Axis',
+                                        categories: ['品质', '数量', '规格', '重量', '安全','卫生','包装','标识','环保']
+                                    },
+                                    credits: {
+                                        enabled: false
+                                    },
+                                    series: [{
+                                        name: '企业数目',
+                                        data: data.qysm
+                                    }, {
+                                        name: '报检批次',
+                                        data: data.bjpc
+                                    }, {
+                                        name: '金额',
+                                        data: data.rmb
+                                    }]
+                                });
+                           });
+    }
+
+       function quarantine() {
+            $.post('${pageContext.request.contextPath}/holographicPortrait/getJYi.do',null,function (data) {
+             $('#container').highcharts({
+                  chart: {
+              type: 'column'
+                },
+                 title: {
+                text: '检疫项目不合格原因概括'
+            },
+            xAxis: {
+               className:'13',
+             categories: ['动物检疫', '植物检疫', '卫生检疫', '木质包装检疫', '其他']
+          },
+            credits: {
+                 enabled: false
+         },
+         series: [{
+            name: '企业数目',
+            data: data.qysm
+        }, {
+            name: '报检批次',
+            data: data.bjpc
+        }, {
+            name: '金额',
+            data: data.rmb
+        }]
+    });
+});
+}
+
+     $.post('${pageContext.request.contextPath}/enterpriseType/selectDyfbzb.do',null,function (data) {
+         $(function () {
+             $('#enterpriseType4').highcharts({
+                 chart: {
+                     plotBackgroundColor: null,
+                     plotBorderWidth: null,
+                     plotShadow: false
+                 },
+                 title: {
+                     text: '报检企业注册地分布占比'
+                 },
+                 tooltip: {
+                     headerFormat: '{series.name}<br>',
+                     pointFormat: '{point.name}: <b>{point.percentage:.1f}%</b>'
+                 },
+                 plotOptions: {
+                     pie: {
+                         allowPointSelect: true,
+                         cursor: 'pointer',
+                         dataLabels: {
+                             enabled: true,
+                             format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                             style: {
+                                 color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                             }
+                         }
+                     }
+                 },
+                 series: [{
+                     type: 'pie',
+                     name: '报检企业注册地分布占比',
+                     data:data.zb
+                 }]
+             });
+         });
+     });
+     $.post('${pageContext.request.contextPath}/enterpriseType/selectDyfb.do',null,function (data) {
+         $(function () {
+             $('#enterpriseType3').highcharts({
+                 chart: {
+                     type: 'bar'
+                 },
+                 title: {
+                     text: '报检企业注册地分布'
+                 },
+                 xAxis: {
+                     categories: data.dm,
+                     title: {
+                         text: null
+                     }
+                 },
+                 yAxis: {
+                     min: 0,
+                     title: {
+                         text: '报检企业注册地分布',
+                         align: 'high'
+                     },
+                     labels: {
+                         overflow: 'justify'
+                     }
+                 },
+                 plotOptions: {
+                     bar: {
+                         dataLabels: {
+                             enabled: true,
+                             allowOverlap: true
+                         }
+                     }
+                 },
+                 legend: {
+                     layout: 'vertical',
+                     align: 'right',
+                     verticalAlign: 'top',
+                     x: -40,
+                     y: 100,
+                     floating: true,
+                     borderWidth: 1,
+                     backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+                     shadow: true
+                 },
+                 credits: {
+                     enabled: false
+                 },
+                 series: [{
+                     name:'报检企业注册地分布',
+                     data: data.qysm
+                 }]
+             });
+         });
+     });
 </script>
 </html>

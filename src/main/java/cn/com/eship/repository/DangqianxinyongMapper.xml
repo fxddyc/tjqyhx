@@ -58,4 +58,44 @@ from  eciq_gdata.ITF_DCL_IO_DECL
 select count(distinct MNUFCTR_CODE)
 from  eciq_gdata.ITF_INS_RESULT_GOODS
     </select>
+
+    <select id="selectBYBaojiandan" resultType="Integer">
+        select count(distinct DECL_NO) from
+        eciq_gdata.ITF_DCL_IO_DECL  where
+        DECL_DATE between TRUNC(SYSDATE, 'MM')  and last_day(SYSDATE)
+    </select>
+    <select id="selectBYBaojianjine" resultType="Long">
+        select sum(TOTAL_VAL_CN) from
+        eciq_gdata.ITF_DCL_IO_DECL  where
+        DECL_DATE between TRUNC(SYSDATE, 'MM')  and last_day(SYSDATE)
+    </select>
+    <select id="selectBYBaojianqiye" resultType="Integer">
+        select count(distinct DECL_REG_NO) from
+        eciq_gdata.ITF_DCL_IO_DECL  where
+        DECL_DATE between TRUNC(SYSDATE, 'MM')  and last_day(SYSDATE)
+    </select>
+    <select id="selectBjjeBy" resultType="Long">
+        select sum(TOTAL_VAL_CN) from
+        eciq_gdata.ITF_DCL_IO_DECL  where
+        DECL_DATE between TRUNC(SYSDATE, 'MM')  and last_day(SYSDATE)
+    </select>
+    <select id="selectBjjeSy" resultType="Long">
+        select sum(TOTAL_VAL_CN) from
+        eciq_gdata.ITF_DCL_IO_DECL  where
+        DECL_DATE BETWEEN last_day(add_months(sysdate,-2))+1 and last_day(add_months(sysdate,-1))
+    </select>
+    <select id="selectBYbuhegepici" resultType="Integer">
+        select count(distinct b.DECL_NO) from
+        eciq_gdata.ITF_DCL_IO_DECL b where
+        b.DECL_DATE between TRUNC(SYSDATE, 'MM')  and last_day(SYSDATE)
+        and b.DECL_NO in (select distinct a.DECL_NO from
+        eciq_gdata.ITF_INS_RESULT_GOODS a where a.DISQUA_CONT_CODES is not null)
+    </select>
+    <select id="selectBYbuhegejine" resultType="Long">
+        select sum(b.TOTAL_VAL_CN) from
+        eciq_gdata.ITF_DCL_IO_DECL b where
+        b.DECL_DATE between TRUNC(SYSDATE, 'MM')  and last_day(SYSDATE)
+        and b.DECL_NO in (select distinct a.DECL_NO from
+        eciq_gdata.ITF_INS_RESULT_GOODS a where a.DISQUA_CONT_CODES is not null)
+    </select>
 </mapper>

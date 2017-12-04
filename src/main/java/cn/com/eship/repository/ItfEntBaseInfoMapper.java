@@ -54,4 +54,6 @@ public interface ItfEntBaseInfoMapper {
     int updateByPrimaryKey(ItfEntBaseInfo record);
 
     List<ItfEntBaseInfo> selectItfEntBaseInfo(String str);
+
+    ItfEntBaseInfo selectItfEntBaseInfoByZzjgdm(String zzjgdm);
 }
